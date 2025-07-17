@@ -66,7 +66,7 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 
 ---
 
-## 📁 Structure du projet
+ 📁 Structure du projet
 
 skillhub/
 │
@@ -100,7 +100,7 @@ skillhub/
 
 ---
 
-## 📌 Bonnes pratiques
+ 📌 Bonnes pratiques
 ✔️ Clean Architecture (Controller → Service → Repository)
 ✔️ DTOs + MapStruct pour séparer API et entités JPA
 ✔️ Séparation des environnements : dev, prod
