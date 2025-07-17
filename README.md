@@ -65,6 +65,23 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 💡 Tu peux automatiser cela avec un fichier d'import JSON (à venir).
 
 ---
+ 📌 Bonnes pratiques
+✔️ Clean Architecture (Controller → Service → Repository)
+✔️ DTOs + MapStruct pour séparer API et entités JPA
+✔️ Séparation des environnements : dev, prod
+✔️ Configuration via .env & Spring Profiles
+✔️ Sécurité OAuth2 centralisée
+✔️ Responsive UI Angular
+✔️ Dockerisation complète
+
+---
+
+## 🧪 Tests
+🔬 Tests unitaires avec JUnit & Mockito (backend)
+🔍 Tests end-to-end avec Cypress (frontend – à venir)
+✅ Tests de validation pour DTOs
+
+---
 
  📁 Structure du projet
 
@@ -97,26 +114,6 @@ skillhub/
 │
 ├── docker-compose.yml
 └── README.md
-
----
-
- 📌 Bonnes pratiques
-✔️ Clean Architecture (Controller → Service → Repository)
-✔️ DTOs + MapStruct pour séparer API et entités JPA
-✔️ Séparation des environnements : dev, prod
-✔️ Configuration via .env & Spring Profiles
-✔️ Sécurité OAuth2 centralisée
-✔️ Responsive UI Angular
-✔️ Dockerisation complète
-
----
-
-## 🧪 Tests
-🔬 Tests unitaires avec JUnit & Mockito (backend)
-🔍 Tests end-to-end avec Cypress (frontend – à venir)
-✅ Tests de validation pour DTOs
-
----
 
 ## 📖 Auteur
 
