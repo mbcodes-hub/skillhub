@@ -43,14 +43,6 @@ SkillHub est une plateforme full-stack destinée aux développeurs pour présent
 - PostgreSQL
 - Keycloak (ou utiliser Docker)
 
-### 🧪 Backend
-
-```bash
-cd backend
-./mvnw spring-boot:run
-
----
-
 ## 🔐 Authentification avec Keycloak
 SkillHub utilise Keycloak comme fournisseur d'identité.
 
