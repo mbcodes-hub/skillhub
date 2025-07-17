@@ -68,7 +68,6 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 
 ## 📁 Structure du projet
 
-```bash
 skillhub/
 │
 ├── backend/              # Backend Spring Boot
