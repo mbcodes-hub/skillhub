@@ -45,14 +45,14 @@ SkillHub est une plateforme full-stack destinée aux développeurs pour présent
 
 ## 🔐 Authentification avec Keycloak
 SkillHub utilise Keycloak comme fournisseur d'identité.
-Accéder à Keycloak sur http://localhost:8080
-Se connecter avec :
-user: admin
-password: admin
-Créer un realm skillhub-realm
-Ajouter un client skillhub-client (type: public ou confidential)
-Créer des utilisateurs avec rôles : USER, ADMIN
-💡 Tu peux automatiser cela avec un fichier d'import JSON (à venir).
+- Accéder à Keycloak sur http://localhost:8080
+- Se connecter avec :
+- user: admin
+- password: admin
+- Créer un realm skillhub-realm
+- Ajouter un client skillhub-client (type: public ou confidential)
+- Créer des utilisateurs avec rôles : USER, ADMIN
+- 💡 Tu peux automatiser cela avec un fichier d'import JSON (à venir).
 
 
 ## 📌 Bonnes pratiques
@@ -73,7 +73,7 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 
 
  ## 📁 Structure du projet
-
+```bash
 skillhub/
 │
 ├── backend/              # Application Spring Boot
