@@ -31,6 +31,39 @@ SkillHub est une plateforme full-stack destinée aux développeurs pour présent
 - 📁 Upload d'images pour les projets
 - 🌐 Design responsive
 
+
+ ## 📁 Structure du projet
+```bash
+skillhub/
+│
+├── backend/              # Application Spring Boot
+│   ├── src/main/java/com/skillhub/
+│   │   ├── config/       # Sécurité, Keycloak, CORS, Swagger
+│   │   ├── controller/   # API REST
+│   │   ├── dto/          # Objets de transfert
+│   │   ├── entity/       # Entités JPA
+│   │   ├── mapper/       # Interfaces MapStruct
+│   │   ├── repository/   # Requêtes vers la BDD
+│   │   └── service/      # Logique métier
+│   └── resources/
+│       ├── application.yml
+│       └── ...
+│
+├── frontend/             # Application Angular
+│   ├── src/app/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── app.module.ts
+│   └── ...
+│
+├── docker/
+│   ├── backend/          # Dockerfile backend
+│   └── frontend/         # Dockerfile frontend
+│
+├── docker-compose.yml
+└── README.md
+```
 ---
 
 ## 📦 Installation locale (sans Docker)
@@ -71,39 +104,6 @@ SkillHub utilise Keycloak comme fournisseur d'identité.
 - ✅ Tests de validation pour DTOs
 
 
-
- ## 📁 Structure du projet
-```bash
-skillhub/
-│
-├── backend/              # Application Spring Boot
-│   ├── src/main/java/com/skillhub/
-│   │   ├── config/       # Sécurité, Keycloak, CORS, Swagger
-│   │   ├── controller/   # API REST
-│   │   ├── dto/          # Objets de transfert
-│   │   ├── entity/       # Entités JPA
-│   │   ├── mapper/       # Interfaces MapStruct
-│   │   ├── repository/   # Requêtes vers la BDD
-│   │   └── service/      # Logique métier
-│   └── resources/
-│       ├── application.yml
-│       └── ...
-│
-├── frontend/             # Application Angular
-│   ├── src/app/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── app.module.ts
-│   └── ...
-│
-├── docker/
-│   ├── backend/          # Dockerfile backend
-│   └── frontend/         # Dockerfile frontend
-│
-├── docker-compose.yml
-└── README.md
-```
 
 ## 📖 Auteur
 
