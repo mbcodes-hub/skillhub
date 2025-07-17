@@ -103,7 +103,7 @@ skillhub/
 │
 ├── docker-compose.yml
 └── README.md
-...
+```
 
 ## 📖 Auteur
 
