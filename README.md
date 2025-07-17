@@ -56,19 +56,19 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 
 
 ## 📌 Bonnes pratiques
-✔️ Clean Architecture (Controller → Service → Repository)
-✔️ DTOs + MapStruct pour séparer API et entités JPA
-✔️ Séparation des environnements : dev, prod
-✔️ Configuration via .env & Spring Profiles
-✔️ Sécurité OAuth2 centralisée
-✔️ Responsive UI Angular
-✔️ Dockerisation complète
+- ✔️ Clean Architecture (Controller → Service → Repository)
+- ✔️ DTOs + MapStruct pour séparer API et entités JPA
+- ✔️ Séparation des environnements : dev, prod
+- ✔️ Configuration via .env & Spring Profiles
+- ✔️ Sécurité OAuth2 centralisée
+- ✔️ Responsive UI Angular
+- ✔️ Dockerisation complète
 
 
 ## 🧪 Tests
-🔬 Tests unitaires avec JUnit & Mockito (backend)
-🔍 Tests end-to-end avec Cypress (frontend – à venir)
-✅ Tests de validation pour DTOs
+- 🔬 Tests unitaires avec JUnit & Mockito (backend)
+- 🔍 Tests end-to-end avec Cypress (frontend – à venir)
+- ✅ Tests de validation pour DTOs
 
 
 
@@ -76,24 +76,24 @@ Créer des utilisateurs avec rôles : USER, ADMIN
 
 skillhub/
 │
-├── backend/              # Backend Spring Boot
+├── backend/              # Application Spring Boot
 │   ├── src/main/java/com/skillhub/
-│   │   ├── config/       # Configuration (Keycloak, Swagger, CORS)
-│   │   ├── controller/   # Contrôleurs REST
-│   │   ├── dto/          # DTOs
+│   │   ├── config/       # Sécurité, Keycloak, CORS, Swagger
+│   │   ├── controller/   # API REST
+│   │   ├── dto/          # Objets de transfert
 │   │   ├── entity/       # Entités JPA
-│   │   ├── mapper/       # MapStruct interfaces
-│   │   ├── repository/   # Interfaces JPA
+│   │   ├── mapper/       # Interfaces MapStruct
+│   │   ├── repository/   # Requêtes vers la BDD
 │   │   └── service/      # Logique métier
 │   └── resources/
 │       ├── application.yml
 │       └── ...
 │
-├── frontend/             # Frontend Angular
+├── frontend/             # Application Angular
 │   ├── src/app/
 │   │   ├── components/
-│   │   ├── services/
 │   │   ├── pages/
+│   │   ├── services/
 │   │   └── app.module.ts
 │   └── ...
 │
@@ -103,6 +103,7 @@ skillhub/
 │
 ├── docker-compose.yml
 └── README.md
+
 
 ## 📖 Auteur
 
