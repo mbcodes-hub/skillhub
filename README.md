@@ -21,6 +21,52 @@ SkillHub est une plateforme full-stack destinée aux développeurs pour présent
 - **Conteneurisation** : Docker + Docker Compose
 
 ---
+## ✨ Fonctionnalités
+
+- 🔐 Authentification avec Keycloak (OAuth2 / OpenID Connect)
+- 🧑‍💻 Gestion de portfolio : projets, compétences, liens GitHub
+- ✍️ Blog personnel en markdown
+- 📊 Tableau de bord admin
+- 🔎 Recherche de profils
+- 📁 Upload d'images pour les projets
+- 🌐 Design responsive
+
+---
+
+## 📦 Installation locale (sans Docker)
+
+### 🧩 Prérequis
+
+- Java 17
+- Node.js & npm
+- Angular CLI
+- PostgreSQL
+- Keycloak (ou utiliser Docker)
+
+### 🧪 Backend
+
+```bash
+cd backend
+./mvnw spring-boot:run
+
+## 🔐 Authentification avec Keycloak
+SkillHub utilise Keycloak comme fournisseur d'identité.
+
+Accéder à Keycloak sur http://localhost:8080
+
+Se connecter avec :
+
+user: admin
+
+password: admin
+
+Créer un realm skillhub-realm
+
+Ajouter un client skillhub-client (type: public ou confidential)
+
+Créer des utilisateurs avec rôles : USER, ADMIN
+
+💡 Tu peux automatiser cela avec un fichier d'import JSON (à venir).
 
 ## 📁 Structure du projet
 
@@ -54,3 +100,28 @@ skillhub/
 │
 ├── docker-compose.yml
 └── README.md
+
+## 📌 Bonnes pratiques
+✔️ Clean Architecture (Controller → Service → Repository)
+✔️ DTOs + MapStruct pour séparer API et entités JPA
+✔️ Séparation des environnements : dev, prod
+✔️ Configuration via .env & Spring Profiles
+✔️ Sécurité OAuth2 centralisée
+✔️ Responsive UI Angular
+✔️ Dockerisation complète
+
+## 🧪 Tests
+🔬 Tests unitaires avec JUnit & Mockito (backend)
+🔍 Tests end-to-end avec Cypress (frontend – à venir)
+✅ Tests de validation pour DTOs
+
+## 📖 Auteur
+
+**Marwa Bellakhal**  
+Développeuse Full Stack Java / Angular
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/marwa-bellakhal-1b8b18105/)
+- 🐱 [GitHub](https://github.com/mbcodes-hub)
+- 🌍 Basée à Tunisie
+- 📧 mb.digital.dev@gmail.com
+
