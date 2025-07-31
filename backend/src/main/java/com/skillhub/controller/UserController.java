@@ -1,6 +1,17 @@
 package com.skillhub.controller;
 
 
+import com.skillhub.dto.UserCreateDto;
+import com.skillhub.dto.UserDetailsDto;
+import com.skillhub.dto.UserDto;
+import com.skillhub.service.UserService;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
