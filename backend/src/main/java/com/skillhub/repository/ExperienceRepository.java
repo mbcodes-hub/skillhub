@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface ExperienceRepository extends JpaRepository<Experience, Long> {
     List<Experience> findByUserId(Long userId);
+
+    List<Experience> findByUserIdAndCurrentJobTrue(Long userId);
 }

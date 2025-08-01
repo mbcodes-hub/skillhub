@@ -27,6 +27,10 @@ public class ExperienceService {
         return mapper.toDto(repository.findById(id).orElseThrow(() -> new RuntimeException("Not found")));
     }
 
+    public List<Experience> findCurrentJobsByUserId(Long userId) {
+        return repository.findByUserIdAndCurrentJobTrue(userId);
+    }
+
     public ExperienceDto create(ExperienceDto dto) {
         Experience saved = repository.save(mapper.toEntity(dto, userMapperHelper));
         return mapper.toDto(saved);

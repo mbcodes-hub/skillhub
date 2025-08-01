@@ -1,5 +1,6 @@
 package com.skillhub.controller;
 
+import com.skillhub.domain.Experience;
 import com.skillhub.dto.ExperienceDto;
 import com.skillhub.service.ExperienceService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,15 @@ public class ExperienceController {
     @GetMapping("/{id}")
     public ResponseEntity<ExperienceDto> getById(@PathVariable Long id) {
         return ResponseEntity.ok(service.getById(id));
+    }
+
+    @GetMapping("/user/{userId}/current-jobs")
+    public ResponseEntity<List<Experience>> getCurrentJobsByUserId(@PathVariable Long userId) {
+        List<Experience> experiences = service.findCurrentJobsByUserId(userId);
+        if (experiences.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(experiences);
     }
 
     @PostMapping
