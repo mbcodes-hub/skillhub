@@ -1,6 +1,7 @@
 package com.skillhub.service;
 
 import com.skillhub.domain.User;
+import com.skillhub.dto.RegisterRequest;
 import com.skillhub.dto.UserCreateDto;
 import com.skillhub.dto.UserDetailsDto;
 import com.skillhub.dto.UserDto;
@@ -35,6 +36,15 @@ public class UserService {
         User user = userMapper.toEntity(userCreateDto);
         user.setRole("USER");
         return userMapper.toDto(userRepository.save(user));
+    }
+
+    public void saveUserInDatabase(RegisterRequest request) {
+        User user = User.builder()
+                .username(request.getUsername())
+                .email(request.getEmail())
+                .build();
+
+        userRepository.save(user);
     }
 
     public void deleteUser(Long id) {

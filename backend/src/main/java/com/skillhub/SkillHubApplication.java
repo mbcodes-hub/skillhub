@@ -8,7 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SkillHubApplication {
 
 	public static void main(String[] args) {
-		Dotenv dotenv = Dotenv.configure().load();
+
+		Dotenv dotenv = Dotenv.configure()
+				.directory("./")
+				.filename(".env")
+				.ignoreIfMalformed()
+				.ignoreIfMissing()
+				.load();
+
 		dotenv.entries().forEach(entry ->
 				System.setProperty(entry.getKey(), entry.getValue())
 		);
